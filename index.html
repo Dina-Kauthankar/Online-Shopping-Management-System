@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Shopping Management System</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f5f7;
+        display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        background: #0f172a;
+        color: white;
+        position: fixed;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .sidebar a {
+        color: #cbd5e1;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+        font-size: 15px;
+        border-left: 3px solid transparent;
+    }
+
+    .sidebar a:hover {
+        background: #1e293b;
+        color: white;
+        border-left: 3px solid #3b82f6;
+    }
+
+    /* Top Navbar */
+    .navbar {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        background: white;
+        padding: 12px 25px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #1e293b;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+
+    /* Main Content */
+    .content {
+        margin-left: 250px;
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: #1e293b;
+    }
+
+    /* Card Grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: 0.3s;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        color: #1e293b;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>🛒 Dashboard</h2>
+
+    <a href="insert_customer.php">➕ Login Customer</a>
+    <a href="insert_product.php">📦 Add Product</a>
+    <a href="insert_order.php">📝 Place Order</a>
+
+    <a href="update_customer.php">✏ Update/Delete Customer</a>
+    <a href="update_product.php">✏ Update/Delete Product</a>
+    <a href="update_order.php">✏ Update/Delete Order</a>
+
+    <a href="search_customer.php">🔍 Search Customer Details</a>
+    <a href="search_product.php">🔍 Search Customer-Product</a>
+    <a href="search_only_product.php">🔍 Search Product</a>
+
+    <a href="joins.php">🔄 Customer–Payment–Product</a>
+    <a href="aggegrate.php">📊 Sales Analysis</a>
+    <a href="nested_queries.php">📌 Other Details</a>
+    <a href="customer_per_city.php">🏙 Customers per City</a>
+
+    <a href="analytics.php">📊 Sales Summary</a>
+    <a href="Avg_order_quantity.php">📊 Avg Order Quantity</a>
+</div>
+
+<!-- Top Navbar -->
+<div class="navbar">
+    Online Shopping Management System
+</div>
+
+<!-- Main Content -->
+<div class="content">
+
+    <div class="section-title">📁 Quick Actions</div>
+
+    <div class="grid">
+
+        <a href="insert_customer.php" class="card">👤 Login customer</a>
+
+        <a href="insert_product.php" class="card">📦 Add Product</a>
+
+        <a href="insert_order.php" class="card">📝 Place New Order</a>
+
+        <a href="search_customer.php" class="card">🔍 Search Customer Details</a>
+
+        <a href="analytics.php" class="card">📊 View Sales Analytics</a>
+
+        <a href="search_product.php" class="card">🛍 Customer Product History</a>
+
+        <a href="customer_per_city.php" class="card">🏙 Customer City Report</a>
+
+        <a href="joins.php" class="card">🔗 Full Order Report</a>
+
+        <a href="view_product.html" class="card">🔗 View Products</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
