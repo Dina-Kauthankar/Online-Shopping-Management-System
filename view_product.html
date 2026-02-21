@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>View Products</title>
+<style>
+body {
+    background: #f5f5f5;
+    font-family: Poppins, sans-serif;
+    padding: 30px;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+    background: #4a00e0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background: #3500b5;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Available Products</h2>
+
+<div class="grid">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+        <img src="images/wireless_mouse.jpg">
+        <h3>Wireless Mouse</h3>
+        <p>₹799</p>
+        <button onclick="orderNow(1,'Wireless Mouse',799)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+        <img src="images/mechanical_kb.jpg">
+        <h3>Mechanical Keyboard</h3>
+        <p>₹2499</p>
+        <button onclick="orderNow(2,'Mechanical Keyboard',2499)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+        <img src="images/bluetooth_headphones.jpg">
+        <h3>Bluetooth Headphones</h3>
+        <p>₹1999</p>
+        <button onclick="orderNow(3,'Bluetooth Headphones',1999)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="card">
+        <img src="images/usb-c_charger.jpg">
+        <h3>USB-C Charger</h3>
+        <p>₹1299</p>
+        <button onclick="orderNow(4,'USB-C Charger',1299)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="card">
+        <img src="images/smart_watch.jpg">
+        <h3>Smart Watch</h3>
+        <p>₹3499</p>
+        <button onclick="orderNow(5,'Smart Watch',3499)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="card">
+        <img src="images/laptop_stand.jpg">
+        <h3>Laptop Stand</h3>
+        <p>₹999</p>
+        <button onclick="orderNow(6,'Laptop Stand',999)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 7 -->
+    <div class="card">
+        <img src="images/hd_webcam.jpg">
+        <h3>HD Webcam</h3>
+        <p>₹1799</p>
+        <button onclick="orderNow(7,'HD Webcam',1799)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 8 -->
+    <div class="card">
+        <img src="images/ssb1_tb.jpg">
+        <h3>Portable SSD 1TB</h3>
+        <p>₹6999</p>
+        <button onclick="orderNow(8,'Portable SSD 1TB',6999)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 9 -->
+    <div class="card">
+        <img src="images/mobile.jpg">
+        <h3>Mobile</h3>
+        <p>₹15000</p>
+        <button onclick="orderNow(9,'Mobile',15000)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 10 -->
+    <div class="card">
+        <img src="images/led_torch.jpg">
+        <h3>LED Torch</h3>
+        <p>₹500</p>
+        <button onclick="orderNow(10,'LED Torch',500)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 11 -->
+    <div class="card">
+        <img src="images/bb.jpg">
+        <h3>Basketball</h3>
+        <p>₹799</p>
+        <button onclick="orderNow(11,'Basketball',799)">Order Now</button>
+    </div>
+
+    <!-- PRODUCT 12 -->
+    <div class="card">
+        <img src="images/laptop.jpg">
+        <h3>Laptop</h3>
+        <p>₹72000</p>
+        <button onclick="orderNow(12,'Laptop',72000)">Order Now</button>
+    </div>
+
+</div>
+</div>
+
+<script>
+function orderNow(id, name, price) {
+    // Send product data to insert_order.php
+    window.location.href =
+        "insert_order.php?pid=" + id +
+        "&pname=" + encodeURIComponent(name) +
+        "&price=" + price;
+}
+</script>
+
+</body>
+</html>
